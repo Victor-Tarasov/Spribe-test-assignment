@@ -33,6 +33,15 @@ public class WordCounterTest {
 	}
 
 	@Test
+	public void caseIgnoreTest() {
+		String word = "someWord";
+		counter.addAll("someword");
+		counter.addAll("SOMEWORD");
+		counter.addAll("SoMeWoRd");
+		assertEquals(3, counter.getCount(word));
+	}
+
+	@Test
 	public void splitTest() {
 		String text = "firs second can't couldn`t  back-end:front-end \t third \n fifth*sixth 123";
 		String[] words = {"firs",  "second", "can't", "couldn`t",  "back-end", "front-end", "third", "fifth", "sixth", "123"};
