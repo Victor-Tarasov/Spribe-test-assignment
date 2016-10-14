@@ -67,7 +67,7 @@ public class SearcherTest {
 				new Player("Player2", 7.3),
 				new Player("Player3", 6.4),
 				new Player("Player4", 5));
-		ArrayList<Player> shuffledPlayers = Lists.newArrayList(players);
+		List<Player> shuffledPlayers = Lists.newArrayList(players);
 		Collections.shuffle(shuffledPlayers);
 		shuffledPlayers.forEach(searcher::add);
 
